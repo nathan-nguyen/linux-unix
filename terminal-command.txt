@@ -1,0 +1,188 @@
+# Terminal commands file
+
+#*******************************************************************************
+# DU
+#*******************************************************************************
+
+(*) Example: du - h
+Explanation: Size of a directory
+
+#*******************************************************************************
+# SED
+#*******************************************************************************
+
+(*) Option:
+	-i : Write to the same file (Linux)
+
+(*) Example: sed s'/;$//' $FileIn > $FileOut
+Explanation: Remove the last semicolon in each line ($: End of line character - ^: Begin of line character)
+
+(*) Example: sed 's/\t/;/g' $FileIn > $FileOut
+Explanation: Replace all tab character by semicolon character (/g means global - without /g, sed only replaces once each line)
+
+(*) Example: sed 's/#//g' $FileIn > $FileOut
+Explanation: Remove all '#' character
+
+(*) Example: sed -n - e 100000p $FileName
+Explanation: Print line number 100000
+
+(*) Example: sed '1d' $FileIn > $FileOut
+Explanation: Remove the first line
+
+(*) Example: sed '$d' $FileIn > $FileOut
+Explanation: Remove the last line
+
+#*******************************************************************************
+# TEE
+#*******************************************************************************
+
+(*) Example: sort $FileIn | tee -a $FileOut
+Explanation: append file and print to screen
+
+#*******************************************************************************
+# FIND
+#*******************************************************************************
+
+(*) Example: find . -name $fileNamePattern
+Explanation: Find file with filename in fileNamePattern
+
+(*) Example: find . -name '*.java' | xargs grep -l $SearchKeyWord
+Explanation: Recursively search for the key word in Unix system
+
+#*******************************************************************************
+# ENV
+#*******************************************************************************
+
+(*) Example: env
+Explanation: list all the environment variables
+
+#*******************************************************************************
+# PRINT
+#*******************************************************************************
+
+Usage: print [option] [string ...]
+OPTIONS
+	-n	Do not append a new-line character to the output.
+
+(*) Example: print $Message
+Explanation: print the message with a new line
+
+(*) Example: print -n $Message
+Explanation: print the message without a new line
+
+#*******************************************************************************
+# SPLIT
+#*******************************************************************************
+
+(*) Example: split -l $NoOfLine $FileName
+Explanation: split a file base on number of line
+
+#*******************************************************************************
+# TAIL
+#*******************************************************************************
+
+(*) Example: tail -n +2 $FileIn > $FileOut
+Explanation: Remove the first line
+
+#*******************************************************************************
+# WC
+#*******************************************************************************
+
+(*) Example: wc -l $FileName | awk '{print $1}'
+Explanation: Print number of lines in the File
+
+(*) Example: wc FileName | awk '{print $2}'
+Explanation: Print word counts in the File
+
+#*******************************************************************************
+# AWK
+#*******************************************************************************
+
+(*) Example: awk -F';' '{print $2";"$5}' $FileName
+Explanation: Print column 2 and column 5
+
+(*) Example: awk '$0=substr($0,1,249)"XYZ"substr($0,253,length($0))' $FileName
+Explanation: Replace position 250-252 by string "XYZ"
+
+#*******************************************************************************
+# TR
+#*******************************************************************************
+
+(*) Example: tr -d '\r' $FileIn > $FileOut
+Explanation: Remove all '\r' characters
+
+#*******************************************************************************
+# GREP
+#*******************************************************************************
+
+(*) Option:
+	-i : Ignore case sensitive
+	-v : Find lines that do not contain key words
+
+#*******************************************************************************
+# EVAL
+#*******************************************************************************
+
+(*) Example: eval "${COMMAND1} ; ${COMMAND2} ; ${COMMAND3}"
+Explanation: Run COMMAND1 --> COMMAND2 --> COMMAND3
+
+#*******************************************************************************
+# UNIQ
+#*******************************************************************************
+
+(*) Example: uniq -c $FileIn
+
+#*******************************************************************************
+# ZIP
+#*******************************************************************************
+
+(*) Example: zip $ZipFileName $FileNeedToBeZipped
+
+#*******************************************************************************
+# GZIP
+#*******************************************************************************
+
+(*) Example: gzip $FileNeedToBeZipped
+Explanation: Zip file $FileNeedToBeZipped to $FileNeedToBeZipped.gz and remove $FileNeedToBeZipped
+
+(*) Example: gzip -c $FileNeedToBeZipped > $ZipFileName
+Explanation: Keep $FileNeedToBeZipped and zip to a new file $ZipFileName
+
+#*******************************************************************************
+# GUNZIP
+#*******************************************************************************
+
+(*) Example: gunzip $FileNeedTobeUnzipped
+Explanation: Unzip $FileNeedTobeUnzipped and remove $FileNeedTobeUnzipped
+
+#*******************************************************************************
+# CURL
+#*******************************************************************************
+
+(*) Example: curl $Url > $FileName
+Explanation: Download page $Url to your local machine
+
+#*******************************************************************************
+# WATCH
+#*******************************************************************************
+
+(*) Example: wach -n 5 'echo Haha'
+Explanation: Run echo Haha every 5 seconds
+
+#*******************************************************************************
+# MANUALLY INSTALL LIBRARY
+#*******************************************************************************
+
+Download and extract to local folder
+
+1. wget https://lib_file_download_link.tar.gz 
+2. tar -xvf lib_file_name.tar.gz 
+3. cd lib_file_name
+
+Copy to /usr/local
+sudo cp -R * /usr/local/
+
+#*******************************************************************************
+#
+#*******************************************************************************
+
