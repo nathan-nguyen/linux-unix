@@ -170,6 +170,16 @@ Explanation: Download page $Url to your local machine
 Explanation: Run echo Haha every 5 seconds
 
 #*******************************************************************************
+# CUT
+#*******************************************************************************
+
+(*) Example: cut -c2-4,3-5 FileName
+Explanation: Show text at position 2-4 and 3-5 in FileName.
+
+(*) Example: cut -c5-
+Explanation: Show text at position 5 to end of the line.
+
+#*******************************************************************************
 # MANUALLY INSTALL LIBRARY
 #*******************************************************************************
 
