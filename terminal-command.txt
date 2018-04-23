@@ -29,6 +29,9 @@ Explanation: Print line number 100000
 (*) Example: sed '1d' $FileIn > $FileOut
 Explanation: Remove the first line
 
+(*) Example: sed '1,8d' $FileIn > FileOut
+Explanation: Remove lines 1 - 8
+
 (*) Example: sed '$d' $FileIn > $FileOut
 Explanation: Remove the last line
 
