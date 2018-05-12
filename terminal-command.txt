@@ -134,6 +134,7 @@ Explanation: Run COMMAND1 --> COMMAND2 --> COMMAND3
 #*******************************************************************************
 
 (*) Example: uniq -c $FileIn
+Explanation: Count the number of unique lines
 
 #*******************************************************************************
 # ZIP
