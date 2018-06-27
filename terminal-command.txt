@@ -137,10 +137,12 @@ Explanation: Run COMMAND1 --> COMMAND2 --> COMMAND3
 Explanation: Count the number of unique lines
 
 #*******************************************************************************
-# ZIP
+# ZIP - 7z
 #*******************************************************************************
 
 (*) Example: zip $ZipFileName $FileNeedToBeZipped
+
+(*) Example: 7z a -tzip $FinalFile $FileOne $FileTwo ....
 
 #*******************************************************************************
 # GZIP
