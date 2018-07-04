@@ -107,6 +107,9 @@ Explanation: Print column 2 and column 5
 (*) Example: awk '$0=substr($0,1,249)"XYZ"substr($0,253,length($0))' $FileName
 Explanation: Replace position 250-252 by string "XYZ"
 
+(*) Example: awk 'substr($0,45,3) == "USD"' $FileName
+Explanation: Print all the lines which have "USD" at position 45 to 47
+
 #*******************************************************************************
 # TR
 #*******************************************************************************
