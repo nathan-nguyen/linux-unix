@@ -211,5 +211,18 @@ Copy to clipboard
 Explanation: Copy content of $FileName to clipboard
 
 #*******************************************************************************
+# PTREE - KILL - PKILL
+#*******************************************************************************
+
+(*) Example: ptree $ProcessId
+Explanation: Display tree process tree that contains $ProcessId
+
+(*) Example: kill -9 $ProcessId
+Explanation: Kill process $ProcessId
+
+(*) Example: pkill -u $UserName
+Explanation: Kill all processes that were owned by $UserName
+
+#*******************************************************************************
 #
 #*******************************************************************************
