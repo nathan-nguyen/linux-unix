@@ -158,11 +158,13 @@ Explanation: Zip file $FileNeedToBeZipped to $FileNeedToBeZipped.gz and remove $
 Explanation: Keep $FileNeedToBeZipped and zip to a new file $ZipFileName
 
 #*******************************************************************************
-# GUNZIP
+# UNZIP
 #*******************************************************************************
 
 (*) Example: gunzip $FileNeedTobeUnzipped
 Explanation: Unzip $FileNeedTobeUnzipped and remove $FileNeedTobeUnzipped
+
+(*) Example: 7z e $FileNeedTobeUnzipped
 
 #*******************************************************************************
 # CURL
@@ -175,7 +177,7 @@ Explanation: Download page $Url to your local machine
 # WATCH
 #*******************************************************************************
 
-(*) Example: wach -n 5 'echo Haha'
+(*) Example: watch -n 5 'echo Haha'
 Explanation: Run echo Haha every 5 seconds
 
 #*******************************************************************************
