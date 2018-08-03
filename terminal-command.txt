@@ -52,6 +52,9 @@ Explanation: Find file with filename in fileNamePattern
 (*) Example: find . -name '*.java' | xargs grep -l $SearchKeyWord
 Explanation: Recursively search for the key word in Unix system
 
+(*) Example: find $Directory -follow
+Explanation: Find all files in the directory
+
 #*******************************************************************************
 # ENV
 #*******************************************************************************
@@ -224,6 +227,16 @@ Explanation: Kill process $ProcessId
 
 (*) Example: pkill -u $UserName
 Explanation: Kill all processes that were owned by $UserName
+
+#*******************************************************************************
+# XARGS
+#*******************************************************************************
+
+(*) Example: $FirstScript.sh | xargs -L 1 $SecondScript.sh
+Explanation: Using output from $FirstScript to be parameter for $SecondScript (One by One)
+
+(*) Example: $FirstScript.sh | xargs -L 2 $SecondScript.sh
+Explanation: Using output from $FirstScript to be parameter for $SecondScript (Two by Two)
 
 #*******************************************************************************
 #
