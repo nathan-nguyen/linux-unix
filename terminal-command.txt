@@ -239,5 +239,13 @@ Explanation: Using output from $FirstScript to be parameter for $SecondScript (O
 Explanation: Using output from $FirstScript to be parameter for $SecondScript (Two by Two)
 
 #*******************************************************************************
-#
+# DIFF
 #*******************************************************************************
+
+(*) Example: diff --brief -Nr $DirectoryOne $DirectoryTwo
+Explanation: Compare between two directories
+
+#*******************************************************************************
+# 
+#*******************************************************************************
+
