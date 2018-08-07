@@ -52,8 +52,11 @@ Explanation: Find file with filename in fileNamePattern
 (*) Example: find . -name '*.java' | xargs grep -l $SearchKeyWord
 Explanation: Recursively search for the key word in Unix system
 
-(*) Example: find $Directory -follow
+(*) Example: find $Directory
 Explanation: Find all files in the directory
+
+(*) Example: find .
+Explanation: Find all the files in current directory
 
 #*******************************************************************************
 # ENV
