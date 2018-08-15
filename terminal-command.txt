@@ -35,6 +35,9 @@ Explanation: Remove lines 1 - 8
 (*) Example: sed '$d' $FileIn > $FileOut
 Explanation: Remove the last line
 
+(*) Example: 's/^\(.\{25\}\)XXXXXXXXXX/\1YYYYYYYYYY/' $InputFile > $OutputFile
+Explanation: Replace XXXXXXXXXX at position 26-35 to YYYYYYYYYY - Without \1, the command will remove all previous characters and the line will start with YYYYYYYYYY.
+
 #*******************************************************************************
 # TEE
 #*******************************************************************************
@@ -116,6 +119,9 @@ Explanation: Replace position 250-252 by string "XYZ"
 (*) Example: awk 'substr($0,45,3) == "USD"' $FileName
 Explanation: Print all the lines which have "USD" at position 45 to 47
 
+(*) Example: awk '{if (substr($0, 26, 1) == "X" && substr($0, 181, 14) == "XXXXXXXXXXXXXX") {$0=substr($0, 1, 180)"YYYYYYYYYYYYYY"substr($0, 195, length($0))} ; print $0}' $FileIn > $FileOut
+Explanation: If a line contains X at position 26-26 and XXXXXXXXXXXXXX at position 181-194 then replace XXXXXXXXXXXXXX at position 181-194 with YYYYYYYYYYYYYY
+
 #*******************************************************************************
 # TR
 #*******************************************************************************
@@ -130,6 +136,7 @@ Explanation: Remove all '\r' characters
 (*) Option:
 	-i : Ignore case sensitive
 	-v : Find lines that do not contain key words
+	-c : Prints only a count of the lines that contain the pattern.
 
 #*******************************************************************************
 # EVAL
@@ -237,7 +244,6 @@ Explanation: Kill all processes that were owned by $UserName
 
 (*) Example: $FirstScript.sh | xargs -L 1 $SecondScript.sh <-> $FirstScript.sh | xargs -n1 $SecondScript.sh (Maximum 1 argument for $SecondScript)
 Explanation: Using output from $FirstScript to be parameter for $SecondScript (One by One)
-
 
 (*) Example: $FirstScript.sh | xargs -L 2 $SecondScript.sh <-> $FirstScript.sh | xargs -L 2 $SecondScript.sh (Maximum 1 argument for $SecondScript)
 Explanation: Using output from $FirstScript to be parameter for $SecondScript (Two by Two)
