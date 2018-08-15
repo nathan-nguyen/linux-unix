@@ -232,14 +232,18 @@ Explanation: Kill process $ProcessId
 Explanation: Kill all processes that were owned by $UserName
 
 #*******************************************************************************
-# XARGS
+# XARGS (xargs runs in sequential, to run in parallel, use -P option)
 #*******************************************************************************
 
-(*) Example: $FirstScript.sh | xargs -L 1 $SecondScript.sh
+(*) Example: $FirstScript.sh | xargs -L 1 $SecondScript.sh <-> $FirstScript.sh | xargs -n1 $SecondScript.sh (Maximum 1 argument for $SecondScript)
 Explanation: Using output from $FirstScript to be parameter for $SecondScript (One by One)
 
-(*) Example: $FirstScript.sh | xargs -L 2 $SecondScript.sh
+
+(*) Example: $FirstScript.sh | xargs -L 2 $SecondScript.sh <-> $FirstScript.sh | xargs -L 2 $SecondScript.sh (Maximum 1 argument for $SecondScript)
 Explanation: Using output from $FirstScript to be parameter for $SecondScript (Two by Two)
+
+(*) Example: $FirstScript.sh | xargs -L 2 -P4 $SecondScript.sh
+Explanation: Run in parallel with 4 processes
 
 #*******************************************************************************
 # DIFF
