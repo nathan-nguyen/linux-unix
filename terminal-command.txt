@@ -153,6 +153,13 @@ Explanation: Run COMMAND1 --> COMMAND2 --> COMMAND3
 Explanation: Count the number of unique lines
 
 #*******************************************************************************
+# SORT
+#*******************************************************************************
+
+(*) Example: sort -u $FILENAME
+Explanation: Equivalent to sort $FILENAME | uniq
+
+#*******************************************************************************
 # ZIP - 7z
 #*******************************************************************************
 
@@ -226,10 +233,10 @@ Copy to clipboard
 Explanation: Copy content of $FileName to clipboard
 
 #*******************************************************************************
-# PTREE - KILL - PKILL
+# PSTREE - KILL - PKILL
 #*******************************************************************************
 
-(*) Example: ptree $ProcessId
+(*) Example: pstree -p $ProcessId
 Explanation: Display tree process tree that contains $ProcessId
 
 (*) Example: kill -9 $ProcessId
