@@ -122,6 +122,9 @@ Explanation: Print all the lines which have "USD" at position 45 to 47
 (*) Example: awk '{if (substr($0, 26, 1) == "X" && substr($0, 181, 14) == "XXXXXXXXXXXXXX") {$0=substr($0, 1, 180)"YYYYYYYYYYYYYY"substr($0, 195, length($0))} ; print $0}' $FileIn > $FileOut
 Explanation: If a line contains X at position 26-26 and XXXXXXXXXXXXXX at position 181-194 then replace XXXXXXXXXXXXXX at position 181-194 with YYYYYYYYYYYYYY
 
+(*) Example: awk '{printf("%-100s\n", substr($0, 0, length($0) - 1) )}' $FILENAME
+Explanation: Set minimum length for each line to 100, filled with space.
+
 #*******************************************************************************
 # TR
 #*******************************************************************************
@@ -266,6 +269,13 @@ Explanation: Run in parallel with 4 processes
 Explanation: Compare between two directories
 
 #*******************************************************************************
-# 
+# CAT
+#*******************************************************************************
+
+(*) Example: cat -e $FILENAME
+Explanation: Display non-printing characters, and display a dollar sign (`$') at the end of each line.
+
+#*******************************************************************************
+#
 #*******************************************************************************
 
