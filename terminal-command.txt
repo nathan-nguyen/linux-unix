@@ -96,6 +96,9 @@ Explanation: split a file base on number of line
 (*) Example: tail -n +2 $FileIn > $FileOut
 Explanation: Remove the first line
 
+(*) Example: tail -f $FileName
+Explanation: Keep reading the file while the file is being appended (Automatically update when the file is appended).
+
 #*******************************************************************************
 # WC
 #*******************************************************************************
