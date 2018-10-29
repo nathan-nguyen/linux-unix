@@ -35,6 +35,9 @@ Explanation: Remove lines 1 - 8
 (*) Example: sed '$d' $FileIn > $FileOut
 Explanation: Remove the last line
 
+(*) Example: sed '/NNN/d' $FileName
+Explanation: Remove all the lines contain NNN
+
 (*) Example: 's/^\(.\{25\}\)XXXXXXXXXX/\1YYYYYYYYYY/' $InputFile > $OutputFile
 Explanation: Replace XXXXXXXXXX at position 26-35 to YYYYYYYYYY - Without \1, the command will remove all previous characters and the line will start with YYYYYYYYYY.
 
