@@ -41,6 +41,12 @@ Explanation: Remove all the lines contain NNN
 (*) Example: 's/^\(.\{25\}\)XXXXXXXXXX/\1YYYYYYYYYY/' $InputFile > $OutputFile
 Explanation: Replace XXXXXXXXXX at position 26-35 to YYYYYYYYYY - Without \1, the command will remove all previous characters and the line will start with YYYYYYYYYY.
 
+(*) Example: sed 's/XXX[^"]*YYY//g' $FileIn
+Explanation: Delete string with pattern XXX*YYY
+
+(*) Example: sed '/^\s*$/d'
+Explanation: Delete empty line
+
 #*******************************************************************************
 # TEE
 #*******************************************************************************
@@ -168,6 +174,9 @@ Explanation: Count the number of unique lines
 (*) Example: sort -u $FILENAME
 Explanation: Equivalent to sort $FILENAME | uniq
 
+(*) Example: sort -k1 -n $FileIn
+Explanation: Sort first column as number
+
 #*******************************************************************************
 # ZIP - 7z
 #*******************************************************************************
@@ -282,6 +291,12 @@ Explanation: Compare between two directories
 Explanation: Display non-printing characters, and display a dollar sign (`$') at the end of each line.
 
 #*******************************************************************************
-#
+# PASTE
 #*******************************************************************************
 
+(*) Example: paste -d ' ' $FileOne $FileTwo
+Explanation: Mege two file line by line
+
+#*******************************************************************************
+#
+#*******************************************************************************
