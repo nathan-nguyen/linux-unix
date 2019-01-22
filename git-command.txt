@@ -1,0 +1,55 @@
+# Git commands file
+
+#*******************************************************************************
+# GIT
+#*******************************************************************************
+
+
+(1) .gitkeep
+To be able to commit an empty directory, create an empty file named: .gitkeep
+
+
+(2) Rebase local branch with remote master
+git pull --rebase origin master
+git push -f
+
+
+(3) Undo a merge
+git merge --abort
+
+
+(4) Squash last X commits together using Git
+Step 1: git rebase -i HEAD~X
+Step 2: Replace "pick" on the second and subsequent commits with "squash"
+Step 3: Save
+Step 4: git push -f
+
+
+(5) Synchronize two repositories
+Step 1 - Clone the latest repository:
+git clone $FIRST_REPO_URL
+Step 2 - Add a remote repository:
+git remote add second $SECOND_REPO_URL
+Step 3 - Pull remote repository:
+git pull second master
+Step 4 - Push change to second repository:
+git push second master
+Step X - Check remote URL:
+git remote -v
+
+
+(6) List both remote-tracking branches and local branches.
+git branch -a
+
+
+(7) Undo git add
+git reset $FILE_NAME
+
+
+(8) Show changes in commit $COMMIT
+git show $COMMIT
+
+
+#*******************************************************************************
+#
+#*******************************************************************************
