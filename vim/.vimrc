@@ -7,3 +7,12 @@ set tabstop=4
 " On pressing tab, insert spaces
 set expandtab
 
+" Enable mouse
+" set mouse=a
+
+" Show cursor line
+" set cursorline
+
+" Enable autoindent
+set autoindent
+

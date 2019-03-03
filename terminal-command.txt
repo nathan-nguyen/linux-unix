@@ -211,6 +211,15 @@ Explanation: Unzip $FileNeedTobeUnzipped and remove $FileNeedTobeUnzipped
 (*) Example: curl $Url > $FileName
 Explanation: Download page $Url to your local machine
 
+(*) Example: curl -d 'Hello World!' $Url
+Explanation: Send Hello World! string to server with $Url
+
+(*) Example: curl -d '$JsonContent' -H 'Content-Type: application/json' $Url
+Explantion: Send json data to server with $Urk
+
+(*) Example: curl -d $FileName $Url
+Explanation: Send file dat to server with $Url
+
 #*******************************************************************************
 # WATCH
 #*******************************************************************************
@@ -282,6 +291,9 @@ Explanation: Run in parallel with 4 processes
 
 (*) Example: diff --brief -Nr $DirectoryOne $DirectoryTwo
 Explanation: Compare between two directories
+
+(*) Example: diff -y $FileOne $FileTwo
+Explanation: Diff side-by-side
 
 #*******************************************************************************
 # CAT
