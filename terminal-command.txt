@@ -310,5 +310,12 @@ Explanation: Display non-printing characters, and display a dollar sign (`$') at
 Explanation: Mege two file line by line
 
 #*******************************************************************************
+# JOBS
+#*******************************************************************************
+
+(*) Example: jobs -l
+Explanation: List all the runnig jobs with corresponding PID. The current job is always flagged with a '+' sign, and the previous job with a '-' sign.
+
+#*******************************************************************************
 #
 #*******************************************************************************
