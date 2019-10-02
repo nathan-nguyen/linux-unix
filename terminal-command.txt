@@ -317,5 +317,22 @@ Explanation: Mege two file line by line
 Explanation: List all the runnig jobs with corresponding PID. The current job is always flagged with a '+' sign, and the previous job with a '-' sign.
 
 #*******************************************************************************
+# SCP
+#*******************************************************************************
+
+(*) Example: scp -r $HOST:$FOLDER_REMOTE_ABSOLUTE_PATH $LOCAL_PATH
+Explanation: Copy whole folder from remote host
+
+#*******************************************************************************
+# RSYNC
+#*******************************************************************************
+
+(*) Example: rsync -r $FOLDER_SOURCE $FOLDER_DESTINATION
+Explanation: Synchronize between two folder (Recurse into directories)
+
+(*) Example: rsync --delete $FOLDER_SOURCE $FOLDER_DESTINATION
+Explanation: Synchronize between two folder and DELETE extraneous file from $FOLDER_DESTINATION
+
+#*******************************************************************************
 #
 #*******************************************************************************
