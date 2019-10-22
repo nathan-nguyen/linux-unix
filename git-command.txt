@@ -54,6 +54,8 @@ git show $COMMIT
 git reset --hard HEAD~5
 git push -f
 
+(1) Revert a commit
+git revert $COMMIT_HASH
 
 #*******************************************************************************
 #
