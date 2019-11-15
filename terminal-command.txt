@@ -137,6 +137,9 @@ Explanation: If a line contains X at position 26-26 and XXXXXXXXXXXXXX at positi
 (*) Example: awk '{printf("%-100s\n", substr($0, 0, length($0) - 1) )}' $FILENAME
 Explanation: Set minimum length for each line to 100, filled with space.
 
+(*) Example: awk '{sum += $1} END {print sum}' $FILE_NAME
+Explanation: Sum first column
+
 #*******************************************************************************
 # TR
 #*******************************************************************************
