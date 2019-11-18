@@ -54,8 +54,14 @@ git show $COMMIT
 git reset --hard HEAD~5
 git push -f
 
-(1) Revert a commit
+(10) Revert a commit
 git revert $COMMIT_HASH
+
+(11) Change remote URL
+git remote set-url origin $GIT_URL
+
+(12) Stash changes and unstash changes (https://www.atlassian.com/git/tutorials/saving-changes/git-stash)
+git stash / git stash pop
 
 #*******************************************************************************
 #
