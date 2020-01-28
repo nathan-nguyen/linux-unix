@@ -337,5 +337,18 @@ Explanation: Synchronize between two folder (Recurse into directories)
 Explanation: Synchronize between two folder and DELETE extraneous file from $FOLDER_DESTINATION
 
 #*******************************************************************************
+# NETCAT
+#*******************************************************************************
+
+(*) Example: nc -lk 9999
+Explanation: Start Netcat server, listen to TCP connection on port 9999
+- Option [-l] to specify PORT.
+- Option [-k] to force Netcat to listen for another connection after its current connection is completed.
+
+(*) Example: nc localhost 9999
+Explanation: Start a connection to above Netcat server.
+
+#*******************************************************************************
 #
 #*******************************************************************************
+
