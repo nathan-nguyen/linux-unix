@@ -349,6 +349,16 @@ Explanation: Start Netcat server, listen to TCP connection on port 9999
 Explanation: Start a connection to above Netcat server.
 
 #*******************************************************************************
+# :
+#*******************************************************************************
+
+(*) Example: :
+Explanation: No effect
+
+Example: : > $FILE_NAME
+Explanation: Empty file $FILE_NAME
+
+#*******************************************************************************
 #
 #*******************************************************************************
 
