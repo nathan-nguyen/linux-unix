@@ -66,6 +66,20 @@ git stash / git stash pop
 (13) Checkout all changes
 git checkout -- .
 
+(14) Remove local untrack files
+# Preview
+git clean -n
+
+# Confirm remove
+git clean -f
+
+(15) Remove local untrack directories
+# Preview
+git clean -nd
+
+# Confirm remove
+git clean -fd
+
 #*******************************************************************************
 #
 #*******************************************************************************
