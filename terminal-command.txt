@@ -152,9 +152,12 @@ Explanation: Remove all '\r' characters
 #*******************************************************************************
 
 (*) Option:
-	-i : Ignore case sensitive
-	-v : Find lines that do not contain key words
-	-c : Prints only a count of the lines that contain the pattern.
+    -i : Ignore case sensitive.
+    -v : Find lines that do not contain key words.
+    -c : Prints only a count of the lines that contain the pattern.
+    -n : Display line number.
+    -A {x} : Display x line(s) after each match.
+    -B {x} : Display x line(s) after each match.
 
 #*******************************************************************************
 # EVAL
@@ -357,6 +360,13 @@ Explanation: No effect
 
 Example: : > $FILE_NAME
 Explanation: Empty file $FILE_NAME
+
+#*******************************************************************************
+# LESS
+#*******************************************************************************
+
+(*) Option:
+    -N : Display line number.
 
 #*******************************************************************************
 #
