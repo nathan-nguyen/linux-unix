@@ -383,6 +383,21 @@ Explanation: List application which is using this $PORT
 Explanation: Display free disk space.
 
 #*******************************************************************************
+# LESS
+#*******************************************************************************
+
+(*) Syntax: less +<line_number> <file_name>
+Example: less +123456 <file_name>
+Explanation: Open at specific line: 123456
+
+(*) Example: less -N <file_name>
+Explanation: Show the line number.
+
+(*) Syntax: In less: <line_number>g
+Example: In less: 123456g
+Explanation: Jump to line 123456
+
+#*******************************************************************************
 #
 #*******************************************************************************
 
