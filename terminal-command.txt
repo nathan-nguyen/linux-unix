@@ -158,6 +158,7 @@ Explanation: Remove all '\r' characters
     -n : Display line number.
     -A {x} : Display x line(s) after each match.
     -B {x} : Display x line(s) after each match.
+    --exclude-dir {FOLDER} : Exclude folder.
 
 #*******************************************************************************
 # EVAL
