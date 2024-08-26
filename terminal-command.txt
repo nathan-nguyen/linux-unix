@@ -292,6 +292,9 @@ Explanation: Using output from $FirstScript to be parameter for $SecondScript (T
 (*) Example: $FirstScript.sh | xargs -L 2 -P4 $SecondScript.sh
 Explanation: Run in parallel with 4 processes
 
+(*) Example: ls | xargs -I {} echo Hello {}!
+Explanation: -I lets you name your argument and put it anywhere you like.
+
 #*******************************************************************************
 # DIFF
 #*******************************************************************************
